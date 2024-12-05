@@ -1272,6 +1272,9 @@ form .button-area {
   .footer .box-container .box .share a {
     padding: 1.2rem;
   }
+  #about .row .image {
+    display: none;
+  }
 }
 /* my change Daryl */
 @media (max-width: 600px) {
