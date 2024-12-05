@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Video Editor","Video Editor", "Graphic Designer", "Web designing", "Canva Speacialist", "Website developer"],
+    strings: ["Video Editor","Video Editor", "Graphic Designer", "Web designing", "Website developer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
