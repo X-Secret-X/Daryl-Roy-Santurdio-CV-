@@ -123,6 +123,7 @@ const srtop = ScrollReveal({
 });
 
 /* SCROLL HOME */
+srtop.reveal('#work .video-grid .video-container', { delay: 400 });
 srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
 srtop.reveal('.home .content .btn', { delay: 200 });
