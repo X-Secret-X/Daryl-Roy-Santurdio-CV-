@@ -255,37 +255,27 @@
   <div class="video-grid">
     <div class="video-container">
 
-      <video controls data-poster="https://images.unsplash.com/photo-1439396874305-9a6ba25de6c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGF0aHxlbnwwfHwwfHx8MA%3D%3D" class="vid1">
+      <video controls data-poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0Q4cCNPRcsKAvJvUofJvNYnGhz8pVzNtUk9XTrTIjql6nW2xFgwR0S4jMR4aVKTJ26Kk-fnEPzWXCOTHeuOz6i48d40SvHOoK1qIJ3VTGWWibBBOoD9geCmGos-gNOvULWdTioFhChc0I3y2eakk5apg7htUCKz0W9heIH6axNL781q1g2XkBYidtZ7WD/s480/5%20facts%20ni%20GON.png" class="vid1">
         <!-- Video files -->
-        <source src="https://archive.org/download/twitchblade-1x-1/TWitchblade-%201x1.mp4" type="video/mp4" size="576" />
+        <source src="https://archive.org/download/saitama-5-facts/5%20fact%20ni%20Gon.mp4" type="video/mp4" size="576" />
       </video>
-
-
-
-    
         <div class="video-title">Video Title 1</div>
     </div>
     <div class="video-container">
-        <video controls>
-            <source src="https://archive.org/download/co-gs-1x-25_202207/CoGs%201x25.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      <video controls data-poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGRpT1WmTxC2gppJiqs3A8Spv2rQzMNs4tzVEP4h4FZcv8eX0OC75ddwx8ZFl_Se18UWNnWiujlb7e1GTn1xxO-n-0AaxFVW2-iR6nFT2Q8KmQR3PIurc31hc-Gd9_iCOkJCobzk1h6KivOeMWdbp81BiJnWq6D6fhctfvQ_hZsG1Qp8SJnalcs2rzuUaZ/s480/Naruto%205%20facts%20na%20dapat%20mong%20Alamin.png" class="vid2">
+        <!-- Video files -->
+        <source src="https://archive.org/download/saitama-5-facts/5%20fact%20about%20naruto.mp4" type="video/mp4" size="576" />
+      </video>
         <div class="video-title">Video Title 2</div>
     </div>
     <div class="video-container">
-        <video controls>
-            <source src="video3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      <video controls data-poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLqK2qgswgSYfCGVl5kGY7J7J798wDA0w56c-r7sP0pakOymMZ3xAEe1jhyphenhyphen7evKuop7yj9Kab_c_NlEhQ5aH8MQleQ7Dd_UJn8cfVP2uNWPEQtlxycMh3NZqTbjtSea7SwuPzxpDqgxDBl7U1ZFaKXajazjqXZN8RQyne6IXASrhGuoqLiimCdf3OoxmO6/s480/SaiTAMA%20THUMNAIL2.png" class="vid3">
+        <!-- Video files -->
+        <source src="https://archive.org/download/saitama-5-facts/Ang%20tunay%20na%20kwento%20ni%20saitama%20.mp4" type="video/mp4" size="576" />
+      </video>
         <div class="video-title">Video Title 3</div>
     </div>
-    <div class="video-container">
-        <video controls>
-            <source src="video4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-title">Video Title 4</div>
-    </div>
+
 </div>
 
 
@@ -413,6 +403,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
 <script>
   const player = new Plyr('.vid1');
+  const players = Array.from(document.querySelectorAll('.vid1, .vid2, .vid3')).map(video => new Plyr(video));
+
 </script>
 <!-- Video Player -->
 
