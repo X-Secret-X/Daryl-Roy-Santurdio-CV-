@@ -29,6 +29,11 @@ $(document).ready(function () {
         });
     });
 
+
+      
+
+
+
     // smooth scrolling
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
@@ -79,7 +84,24 @@ async function fetchData(type = "skills") {
     return data;
 }
 
+// Function to toggle video folders
+function toggleFolder(folderId) {
+    // Hide all video grids
+    document.querySelectorAll('.video-grid').forEach(grid => {
+      grid.classList.remove('show-grid');
+    });
 
+    // Show the selected grid
+    const selectedGrid = document.getElementById(folderId);
+    if (selectedGrid) {
+      selectedGrid.classList.add('show-grid');
+    }
+  }
+
+  // Initialize default folder on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    toggleFolder('folderVideos1');
+  });
 
 
 
@@ -123,7 +145,7 @@ const srtop = ScrollReveal({
 });
 
 /* SCROLL HOME */
-srtop.reveal('#work .video-grid .video-container', { delay: 400 });
+srtop.reveal('#work .chic-chic-video-container', { delay: 200 });
 srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
 srtop.reveal('.home .content .btn', { delay: 200 });
