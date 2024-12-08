@@ -94,6 +94,10 @@ html::-webkit-scrollbar-thumb {
       background-color: rgb(102, 6, 143);
 
     }
+    .chic-chic-folder-button.active {
+      background-color: rgb(102, 6, 143);
+      border: solid #222 1px;
+    }
   
     /* Style for video grids */
     .chic-chic-videogrids {
@@ -106,9 +110,9 @@ html::-webkit-scrollbar-thumb {
     /* Individual video container */
     .chic-chic-video-container {
       text-align: center;
-      overflow: hidden; /* Ensures no extra space around video and title */
-      border: 1px solid darkviolet; /* Dark violet border */
-      border-radius: 5px; /* Rounded corners for the whole block */
+      overflow: hidden; 
+      border: 1px solid darkviolet; 
+      border-radius: 5px;
       width: 100%;
     }
   
@@ -116,39 +120,38 @@ html::-webkit-scrollbar-thumb {
       width: 100%;
   height: auto;
   margin: 0;
-  padding: 0; /* Remove any default margin or padding */
-  display: block; /* Prevent extra space below video */
+  padding: 0; 
+  display: block;
     }
   
     .chic-chic-video-title {
       padding: 5px;
       font-size: 16px;
       font-weight: bold;
-      color: white; /* White text */
-      background: linear-gradient(to top, violet, rgba(104, 22, 22, 0.207)); /* Gradient from bottom (violet) to top (black) */
-      margin: 0; /* Remove any default margin */
+      color: white; 
+      background: linear-gradient(to top, violet, rgba(104, 22, 22, 0.207));
+      margin: 0;
     }
   
-    /* Hide video grids initially */
+
     .chic-chic-videogrids {
       display: none;
     }
   
-    /* Show selected grid */
+
     .chic-chic-show-grid {
       display: flex !important;
     }
-  
-    /* Media Queries for Responsive Design */
+
     @media (min-width: 600px) {
       .chic-chic-video-container {
-        flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+        flex: 1 1 calc(25% - 20px); 
       }
     }
   
     @media (max-width: 600px) {
       .chic-chic-video-container {
-        flex: 1 1 100%; /* 1 item per row */
+        flex: 1 1 100%;
       }
     }
 
@@ -163,33 +166,33 @@ html::-webkit-scrollbar-thumb {
       
     }
     
-    #chic-chic-folderVideos1 p {
-      grid-column: 1 / -1; /* Span the full width of the grid */
-      background-color: #d4b3ec; /* Lavender for subtle contrast */
+    .chic-chic-videogrids p {
+      grid-column: 1 / -1; 
+      background-color: #d4b3ec; 
       padding: 16px;
-      border-left: 4px solid #4b0082; /* Indigo border */
+      border-left: 4px solid #4b0082;
       border-radius: 4px;
       font-size: 16px;
       line-height: 1.6;
       color: #333;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       overflow: hidden;
-      transform-origin: left; /* Start unrolling from the left */
-      transform: scaleX(0); /* Initially "rolled up" horizontally */
-      transition: transform 0.5s ease; /* Smooth unrolling */
+      transform-origin: left; 
+      transform: scaleX(0); 
+      transition: transform 0.5s ease; 
       transition-delay: 1.5s;
 
     }
 
-    #chic-chic-folderVideos1 p::first-letter {
+    .chic-chic-videogrids p::first-letter {
       font-size: 24px;
       font-weight: bold;
-      color: #4b0082; /* Indigo for emphasis */
+      color: #4b0082; 
     }
 
-    /* Hover effect: Rolling to the right */
+
     #work:hover p {
-      transform: scaleX(1); /* Unroll horizontally to full width */
+      transform: scaleX(1); 
       transition-delay: 0s;
 
     }
