@@ -145,7 +145,7 @@ const srtop = ScrollReveal({
 });
 
 /* SCROLL HOME */
-srtop.reveal('#work .chic-chic-video-container', { delay: 200 });
+srtop.reveal('#work .chic-chic-button-container ', { delay: 200 });
 srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
 srtop.reveal('.home .content .btn', { delay: 200 });
