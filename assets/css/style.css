@@ -84,7 +84,7 @@ html::-webkit-scrollbar-thumb {
       margin: 5px;
       font-size: 16px;
       background-color: rgb(56, 5, 78);
-      color: white;
+      color: #b5a5a5;
       cursor: pointer;
       border-radius: 5px 5px 0 0;
       box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -92,11 +92,12 @@ html::-webkit-scrollbar-thumb {
   
     .chic-chic-folder-button:hover {
       background-color: rgb(102, 6, 143);
-
+      color: #ffffff;
     }
     .chic-chic-folder-button.active {
       background-color: rgb(102, 6, 143);
       border: solid #222 1px;
+      color: #ffffff;
     }
   
     /* Style for video grids */
