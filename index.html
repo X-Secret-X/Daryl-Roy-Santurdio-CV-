@@ -256,6 +256,8 @@
     <button class="chic-chic-folder-button" data-target="chic-chic-folderVideos1">Project 1</button>
     <button class="chic-chic-folder-button" data-target="chic-chic-folderVideos2">Project 2</button>
     <button class="chic-chic-folder-button" data-target="chic-chic-folderVideos3">Project 3</button>
+    <button class="chic-chic-folder-button" data-target="chic-chic-folderVideos4">Other projects</button>
+
   </div>
 
   <!-- Video Grid 1 -->
@@ -341,6 +343,32 @@
     </p>
   </div>
 
+   <!-- Video Grid 4 -->
+   
+   <div id="chic-chic-folderVideos4" class="chic-chic-videogrids" style="border:none;">
+    <div class="chic-chic-video-container">
+      <video controls class="vid1">
+        <source src="https://archive.org/download/tacay-the-great/TacayTheGreat.mp4" type="video/mp4">
+      </video>
+      <div class="chic-chic-video-title">Tacay Classmate</div>
+    </div>
+    <div class="chic-chic-video-container">
+      <video controls class="vid2">
+        <source src="https://archive.org/download/practice-edit/PracticeEdit.mp4" type="video/mp4">
+      </video>
+      <div class="chic-chic-video-title">Film Trailer</div>
+    </div>
+    <div class="chic-chic-video-container">
+      <video controls class="vid2">
+        <source src="https://archive.org/download/aqm-7-u-9m-htyj-2ni-k-3-v-8y-mi-2-fpi-egkqj-cuekt-im-2huwcs-6dv-qy-hhdqk-qhinf-h/AQM7U9mHTyj2niK3V8yMi2FPiEGkqjCUEktIm2huwcs6dvQyHHdqkQHinfH9nApeI71nRWnd9ByFGLdU8oqZcPlg%20%281%29.mp4" type="video/mp4">
+      </video>
+      <div class="chic-chic-video-title">Solo Leveling</div>
+    </div>
+    <p>
+      This is another sample of my video editing work from 2024 to 2025. It includes short videos that I posted on Facebook, requested edits from my classmates, and a film trailer for our movie.
+    </p>
+  </div>
+
 </section>
 
 <section class="work" id="work">
@@ -358,8 +386,8 @@
         <div class="desc">
           <p>Senpaitambayan is the name of my anime streaming website, where you may view your preferred anime movies and episodes.</p>
           <div class="btns">
-            <a href="https://www.senpaitambayan.com" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://www.senpaitambayan.com/p/blog-page.html" class="btn" target="_blank"><i class="fas fa-eye"> </i> Link Prof </a>
+            <a href="https://www.senpaitambayan.wiki" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://www.senpaitambayan.wiki/p/blog-page.html" class="btn" target="_blank"><i class="fas fa-eye"> </i> Link Prof </a>
           </div>
         </div>
       </div>
@@ -544,5 +572,36 @@
   });
 </script>
 
+
+<script>
+  // PROJECT 1 LOAD first scri[pt] 
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".chic-chic-videogrids").forEach((grid) => {
+      if (grid.id !== "chic-chic-folderVideos1") {
+        grid.style.display = "none";
+      }
+    });
+
+    document.querySelectorAll(".chic-chic-folder-button").forEach((button) => {
+      button.addEventListener("click", function () {
+        let targetId = this.getAttribute("data-target");
+        let targetDiv = document.getElementById(targetId);
+
+        // Load content only if it's not already loaded
+        if (!targetDiv.dataset.loaded) {
+          targetDiv.dataset.loaded = "true"; // Mark as loaded
+        }
+
+        // Hide all projects
+        document.querySelectorAll(".chic-chic-videogrids").forEach((grid) => {
+          grid.style.display = "none";
+        });
+
+        // Show the selected project
+        targetDiv.style.display = "block";
+      });
+    });
+  });
+</script>
 </body>
 </html>
